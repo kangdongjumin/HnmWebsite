@@ -8,7 +8,8 @@ const ProductDetail = () => {
     const [productDetail, setProductDetail] = useState()
     let {id} = useParams()
     const callDetailProduct=async()=> {
-        let url = `http://localhost:5000/products/${id}`
+        let url = `https://my-json-server.typicode.com/kangdongjumin
+        /HnmWebsite/products/${id}`
         let response = await fetch(url)
         let data = await response.json()
         setProductDetail(data)

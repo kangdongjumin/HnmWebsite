@@ -10,7 +10,8 @@ const ProductAll = ({nowLogin}) => {
     const [query, setQuery] = useSearchParams()
     const getProductData=async() => { 
     let searchQuery = query.get("q") || ""
-    let url = `http://localhost:5000/products/?q=${searchQuery}`
+    let url = `https://my-json-server.typicode.com/kangdongjumin
+    /HnmWebsite/products/?q=${searchQuery}`
     let response = await fetch(url)
     let data = await response.json()
     setProductItem(data)
